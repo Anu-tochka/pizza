@@ -30,10 +30,10 @@ Router::group([
             ->where(['id' => '[\d]+']);
     });
 });
-
-Router::get('/controller', 'VueController@run')
-    ->setMatch('/\/([\w]+)/');
 */
+Router::get('/controller', 'UserController@index')
+    ->setMatch('/\/([\w]+)/'); //для любого явно не заданного пути
+
 Router::error(function(Request $request, Exception $exception) {
     $response = Router::response();
     switch (get_class($exception)) {

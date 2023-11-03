@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Онлайн-пиццерия</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="/public/styles/style.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js" -->
+			  <!-- integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" -->
+			  <!-- crossorigin="anonymous"></script> 
+    </head>
+    <body>
+<!-- <style> -->
+    <!-- .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; } -->
+    <!-- .example-wrapper code { background: #F5F5F5; padding: 2px 6px; } -->
+<!-- </style> -->
+
+		<div class="box">
+			
+			<button>Заказать</button>
+		</div>
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				let url = "https://randomuser.me/api/?results=5";
+				
+				$.ajax({
+					url: url,
+					method: 'get',
+					success: function(data){
+						rez = data.results;
+						console.log(rez);
+					/*	location.assign("/import");
+						$.ajax({
+							url: "/import",
+							method: 'get',
+							data: { rez },
+							success: function(resp){
+								console.log('resp');
+							}
+						});*/
+					}
+				});
+				
+			});
+		});
+	</script>
+    </body>
+</html>
