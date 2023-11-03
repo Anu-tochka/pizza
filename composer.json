@@ -1,0 +1,21 @@
+{
+    "name": "pizza/pizza",
+    "description": "A pizzeria management service that accepts HTTP requests in JSON format",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Pizza\\Pizza\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anna Ovchinnikova"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php-di/php-di": "dev-master",
+        "twig/twig": "3.x-dev",
+        "pecee/simple-router": "dev-master"
+    }
+}
